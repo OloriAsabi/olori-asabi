@@ -5,7 +5,7 @@ import { FaLink } from 'react-icons/fa'
 
 const PersonalProjects = () => {
     const [works, setWorks] = useState([]); 
-    // const [expanded, setExpanded] = useState(false);
+    const [expanded, setExpanded] = useState(false);
      const [filterWork, setFilterWork] = useState([]);
      const [activeFilter, setActiveFilter] = useState('All');
 
@@ -14,10 +14,8 @@ const PersonalProjects = () => {
     
         client.fetch(query).then((data) => {
           setWorks(data);
-        //   setFilterWork(expanded ? data : data.slice(0, 5));
-        setFilterWork(data)
-        });
-    
+          setFilterWork(expanded ? data : data.slice(0, 5));
+        });  
       }, []);
 
       const handleWorkFilter = (item) => {
@@ -33,7 +31,7 @@ const PersonalProjects = () => {
       };
     
   return (
-    <div className='h-screen'>
+    <div className='container mx-auto h-screen w-screen p-5'>
         <div className="text-center items-center shadow-black w-full p-3 flex-wrap flex-row flex justify-center space-x-4 space-y-2">
         {['Angular', 'React.js', "React Native",'Next.js', 'All'].map((item, index) => (
           <div
@@ -48,30 +46,30 @@ const PersonalProjects = () => {
 
       <div>
       <div
-        className="text-center mt-5 mb-15 shadow-black grid lg:grid-cols-3 md:grid-cols-2 gap-y-10 gap-4 sm:grid-cols-1"
+        className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1 m-5 gap-8 justify-center items-center shadow-black text-center"
         > 
          {filterWork.map((work, index) => (
-          <div className="h-screen" key={index}>
+          <div className="mt-5" key={index}>
             <div
-              className="h-1/2 object-cover hover:opacity-100 relative"
+              className="h-full object-cover hover:opacity-100 relative"
             >
               <img src={urlFor(work.imgUrl)} className="block h-full" alt={work.name} />
-              <div className="w-full overlays text-white text-center transition ease-in delay-150 absolute h-full object-cover top-0  bottom-0 left-0 right-0">
-              <h4 className="font-extrabold text-center translate-y-44">{work.title}</h4>
-              <p className="text-center translate-y-44">{work.tags[0]}</p>  
-              <div className="flex justify-evenly p-5 text-center translate-y-60 cursor-pointer">  
+              <div className="w-full overlays justify-center items-center flex flex-col text-white text-center transition ease-in delay-150 absolute h-full object-cover top-0  bottom-0 left-0 right-0">
+              <h4 className="font-extrabold text-center">{work.title}</h4>
+              <p className="text-center">{work.tags[0]}</p>  
+              <div className="flex justify-evenly p-10 text-center  cursor-pointer">  
               <a href={work.projectLink} target="_blank" title='Link' className='icon' rel="noreferrer">
                  <div
-                    className="hover:text-4xl"
+                    className="hover:scale-x-105 p-5"
                   >
-                    <FaLink title='Link' fontSize={20}  className="hover:text-3xl" />
+                    <FaLink title='Link' fontSize={20}  className="hover:scale-x-105  " />
                   </div>
                 </a>
                  <a href={work.codeLink} target="_blank" title='Github Link' className='icon' rel="noreferrer">
                   <div
-                    className=""
+                    className="hover:scale-x-105 p-5"
                   >
-                    <AiFillGithub title='GitHub Link' fontSize={20}  className="hover:text-3xl"/>
+                    <AiFillGithub title='GitHub Link' fontSize={20}  className=" hover:scale-x-105 "/>
                   </div>
                 </a>
               </div>
@@ -83,11 +81,11 @@ const PersonalProjects = () => {
           </div>
         ))}     
       </div> 
-        {/* <div className='bg-black text-white w-18 dark:text-black dark:bg-white rounded text-center p-2 cursor-pointer hover:bg-gray-500 font-medium'>
+        <div className='bg-black text-white dark:text-black w-32 ml-auto mr-auto dark:bg-white rounded text-center p-2 cursor-pointer hover:scale-x-105 font-medium'>
         <button type="button" className='ShowMore-btn' onClick={() => setExpanded(!expanded)}>
           {expanded ? 'Show Less' : 'Show More'} 
         </button>
-        </div> */}
+        </div>
       </div>
     </div>
   )

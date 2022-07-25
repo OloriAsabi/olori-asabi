@@ -26,15 +26,15 @@ const Testimonals = () => {
       }, []);
 
   return (
-    <div className='text-center'>
+    <div className='text-center container mx-auto '>
     <h2 className="text-center text-3xl services p-5 font-extrathin">Testimonials</h2>
 
     {testimonials.length && (
       <>
-        <div className="block">
+        <div className="block container mx-auto">
           <img src={urlFor(testimonials[currentIndex].imgurl)} className="rounded-full h-48 w-48 m-5 ml-auto mr-auto " alt={testimonials[currentIndex].name} />
           <div className="">
-            <p className="text-2xl m-5 w-1/2 text-center ml-auto mr-auto text-center">{testimonials[currentIndex].feedback}</p>
+            <p className="text-2xl m-5 text-center p-5 container mx-auto text-center">{testimonials[currentIndex].feedback}</p>
             <div>
               <h4 className="mt-10 font-bold text-2xl">{testimonials[currentIndex].name}</h4>
               <p className="text-2xl font-bold text-gray-500 m-5">{testimonials[currentIndex].company}</p>
@@ -42,7 +42,7 @@ const Testimonals = () => {
           </div>
         </div>
 
-        <div className="flex justify-evenly">
+        <div className="flex justify-evenly mb-28">
           <div className="bg-black text-white dark:text-black mb-10 dark:bg-white rounded text-center p-2 cursor-pointer hover:text-3xl font-medium" onClick={() => handleClick(currentIndex === 0 ? testimonials.length - 1 : currentIndex - 1)}>
             <HiChevronLeft fontSize={28}/>
           </div>

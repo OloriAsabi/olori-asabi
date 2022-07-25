@@ -28,7 +28,7 @@ import AnimatedText from 'react-animated-text-content';
    
    
     return (
-        <div className="justify-center text-center">
+        <div className="justify-center text-center p-5">
             <div className="">
                <AnimatedText
                 type="words"
@@ -42,20 +42,20 @@ import AnimatedText from 'react-animated-text-content';
                 interval={0.06}
                 duration={0.8}
                 tag="p"
-                className="animated-paragraph w-screen"
+                className="animated-paragraph "
                 includeWhiteSpaces
                 threshold={0.1}
                 rootMargin="20%">
-             {quotes ? quotes.message : 'Awareness is always present, it’s attentiveness we lack '}
+                {quotes ? quotes.message : 'Awareness is always present, it’s attentiveness we lack '}
                </AnimatedText> 
-                <h3 className="mt-5 quoter font-bold">{quotes ? quotes.name : 'Olorì Àṣàbí'}</h3> 
+                <h3 className="mt-5 font-bold">{quotes ? quotes.name : 'Olorì Àṣàbí'}</h3> 
                 </div>
 
                 <button
                   className="button"
                   onClick={handleClick}
                   type="submit">
-                  <GiClick fontSize={28}  className="mt-3 cursor-pointer hover:text-5xl"/>       
+                  <GiClick fontSize={28}  className="mt-3 cursor-pointer hover:scale-x-105 "/>       
                 </button>
         </div>
   )

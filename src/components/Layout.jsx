@@ -1,22 +1,17 @@
 import React from 'react'
-import Navbar from './Navbar'
-import Footer from './Footer'
-
+import Navbar from './Navbar';
 
 const Layout = ({ children }) => {
-    return (
-          <div className="min-h-screen ">
-          <div className="">
-          <Navbar/>
-          </div>
-          <main >
-            {children}
-          </main>
-          <footer>
-            <Footer/>
-          </footer>
-           </div>
-    )
-  }
-  
-  export default Layout
+  return (
+    <div className='w-screen h-screen'>
+    <Navbar/> 
+    <div>
+        <main>
+              {children}   
+        </main>
+    </div>
+    </div>
+  )
+}
+
+export default Layout

@@ -3,7 +3,7 @@ import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
 import {  client } from '../client';
 
 import Books from './Books';
-import  Quotes  from './Quotes';
+import  Quotes  from '../pages/Quotes';
 
 const About = () => {
   const [abouts, setAbouts] = useState([]);

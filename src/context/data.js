@@ -37,6 +37,6 @@ export const services = [
     {id: "6",
     icon: <AiOutlineFileSearch/>,
     title: "SEO Tools",
-    info: "Leverage advanced SEO tools to build and optimize sites for search and for visitors .All stores and websites are designed to maximize the visibility of your brand and help shoppers find your products. Everything from your store page URLs to your navigation are automatically optimized to be search‑engine friendly."
+    info: "Leverage advanced SEO tools to build and optimize sites for search and for visitors .All stores and websites are designed to maximize the visibility of your brand and help shoppers find your products. Everything from your store page URLs to your navigation are automatically optimized to be search-engine friendly."
     }
 ]

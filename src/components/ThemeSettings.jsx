@@ -1,26 +1,25 @@
 import React, { useContext} from 'react';
-import { ImSwitch } from "react-icons/im"
-
+import { BsToggle2Off, BsToggle2On } from 'react-icons/bs';
 
 import { Context } from "../context/Context"
 
 const ThemeSettings = () => {
     const { theme, setTheme } = useContext(Context);
   return (
-    <div>
+    <div  className='ease-in transition'>
       {theme === 'dark' ? (
         <button
           onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-          className="text-dark dark:text-black  bg-white shadow-none p-2 focus:outline-none text-lg rounded-full outline-none ring-transparent cursor-pointer"
+          className="text-white dark:text-white bg-black text-center p-10 ease-in transition focus:outline-none shadow-none p-2 rounded-full outline-none ring-transparent cursor-pointer"
         >
-         <ImSwitch/>
+         <BsToggle2On className="text-center" fontSize={40} />
         </button>
       ) : (
         <button
           onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-          className="text-white-500 dark:text-white bg-dark focus:outline-none shadow-none p-2 text-lg rounded-full outline-none ring-transparent cursor-pointer"
+          className="text-dark dark:text-black text-center p-10  bg-white shadow-none p-2  ease-in transition focus:outline-none rounded-full outline-none ring-transparent cursor-pointer"
         >
-         <ImSwitch/>
+         <BsToggle2Off className="text-center " fontSize={40} />
         </button>
       )}
     </div>
