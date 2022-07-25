@@ -1,24 +1,17 @@
 import React, { useEffect, useState } from "react";
-import { Loader, Navbar , ThemeSettings } from "./components";
+import { Loader, ThemeSettings } from "./components";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Blog, Contact, Portfolio, Home, Services, About } from "./pages";
-import { AiFillHome, AiFillContacts} from 'react-icons/ai';
-import { GrServices} from 'react-icons/gr';
-import { BsFillPersonPlusFill } from 'react-icons/bs'
 import logo from './assests/1.png'
 
 
 import "swiper/css";
 import "swiper/css/pagination";
 
-import { Mousewheel, Pagination } from "swiper";
-import { MdWork } from "react-icons/md";
-import { TbWritingSign } from "react-icons/tb";
+import { Pagination } from "swiper";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
-
-  // const slideMenu = [ <AiFillHome/>, <BsFillPersonPlusFill/>, <GrServices/>, <MdWork/>, <TbWritingSign/>, <AiFillContacts/>]
 
   const slideMenu = [ "Home", "About", "Services", "Portfolio", "Blog", "Contact"]
 

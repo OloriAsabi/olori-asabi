@@ -5,7 +5,6 @@ import App from './App';
 
 import { ContextProvider } from './context/Context';
 import { BrowserRouter } from 'react-router-dom';
-import { Navbar } from './components';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
