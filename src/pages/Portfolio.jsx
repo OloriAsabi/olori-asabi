@@ -18,15 +18,15 @@ const Portfolio = () => {
     }, [])
     
   return (
-    <div className='bg-white text-black dark:text-white dark:bg-black p-5 services'>
+    <div className='bg-white text-black overflow-y-scroll h-screen overscroll-contain dark:text-white dark:bg-black p-5 services'>
     <div className='container mx-auto h-screen'>
-    <p className='text-gray-500 font-bold mb-3'>MY PORTFOLIO</p>
-    <h1 className='font-medium text-2xl'>CREATIVE WORKS</h1>
-        
+    <p className='text-gray-500 text-start font-bold mb-3'>MY PORTFOLIO</p>
+    <h1 className='font-medium md:text-3xl text-start lg:text-3xl sm:text-xl'>CREATIVE WORKS</h1>
+
     <div className='text-center flex justify-between flex-col items-center '>
-     <div className='w-screen'>
+     <div className='w-screen container mx-auto pb-32'>
       <header className='flex justify-between mb-10 p-5'>
-        <h2 className='font-bold text-2xl p-5 underline underline-offset-8'>Personal Projects</h2>
+        <h2 className='font-bold lg:text-2xl md:text-2xl sm:text-xl p-5 underline underline-offset-8'>Personal Projects</h2>
         <button className="" onClick={()=>setShowPersonalProjects(!showPersonalProjects)}>
         {showPersonalProjects ? <AiOutlineMinus className=' bg-black text-white dark:text-black dark:bg-white  hover:scale-x-105  border-none' fontSize={28} /> : <AiOutlinePlus className='bg-black text-white dark:text-black dark:bg-white  hover:scale-x-105  border-none'  fontSize={28}/>} 
         </button> 
@@ -38,9 +38,9 @@ const Portfolio = () => {
        </div>
        </div>
                
-        <div className='w-screen'>
+        <div className='w-screen container mx-auto pb-32'>
             <header className='flex justify-between mt-10 p-5'>
-                 <h2 className='font-bold text-2xl p-5  underline underline-offset-8'>Works</h2>
+                 <h2 className='font-bold lg:text-2xl md:text-2xl sm:text-xl p-5  underline underline-offset-8'>Works</h2>
                 <button className="" onClick={()=>setShowWorkProjects(!showWorkProjects)}>
                 {showWorkProjects ? <AiOutlineMinus className=' bg-black text-white dark:text-black dark:bg-white  hover:scale-x-105  border-none' fontSize={28} /> : <AiOutlinePlus className='bg-black text-white dark:text-black dark:bg-white hover:scale-x-105  border-none'  fontSize={28}/>} 
                 </button> 

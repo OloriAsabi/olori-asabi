@@ -32,8 +32,8 @@ function App() {
       (
        <div className="bg-white text-black dark:bg-black overflow-y-scroll h-screen overscroll-contain dark:text-white">
         <div className="">
-          <nav className="w-screen bg-white shadow h-32 flex md:justify-center dark:text-white dark:bg-black justify-between items-center p-8 shadow-black">
-          <div className="md:flex-[1.5] p-3 flex-start justify-center items-center">
+          <nav className="w-screen bg-white shadow h-20 flex md:justify-center dark:text-white dark:bg-black justify-between items-center p-8 shadow-black">
+          <div className="md:flex-[1.5] flex-start justify-center items-center">
               <a href="/">
               <img src={logo} alt="logo" className="w-22 h-12 object-cover dark:text-white dark:bg-white rounded-none cursor-pointer" />
               </a>
@@ -57,12 +57,12 @@ function App() {
           modules={[Pagination]}
           className="mySwiper bg-white text-black w-screen dark:text-white dark:bg-black"
           >
-          <SwiperSlide className="h-screen"><Home/></SwiperSlide>
-          <SwiperSlide className="h-screen"><About/></SwiperSlide>
-          <SwiperSlide className="h-screen"><Services/></SwiperSlide>
-          <SwiperSlide className="h-screen"><Portfolio/></SwiperSlide>
-          <SwiperSlide className="h-screen"><Blog/></SwiperSlide>
-          <SwiperSlide className="h-screen"><Contact/></SwiperSlide>    
+          <SwiperSlide><Home/></SwiperSlide>
+          <SwiperSlide><About/></SwiperSlide>
+          <SwiperSlide><Services/></SwiperSlide>
+          <SwiperSlide><Portfolio/></SwiperSlide>
+          <SwiperSlide><Blog/></SwiperSlide>
+          <SwiperSlide><Contact/></SwiperSlide>    
           </Swiper>
           </div>    
           <div 

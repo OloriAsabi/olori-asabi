@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import email from '../assests/email.png';
 import { BsWhatsapp } from 'react-icons/bs';
+import { FaGithubSquare, FaLinkedin, FaTwitter} from 'react-icons/fa';
 
 const Contact = () => {
   const [formData, setFormData] = useState(
@@ -38,10 +39,10 @@ const Contact = () => {
   }
 
   return (
-    <div className='bg-white text-black dark:text-white dark:bg-black '>      
+    <div className='bg-white overflow-y-scroll overscroll-contain h-screen text-black dark:text-white dark:bg-black '>      
     <div className='container mx-auto'>
       <div className="text-center">
-          <h1 className='p-5 font-bold text-2xl'>Contact Us</h1>
+          <h1 className='p-5 font-bold md:text-3xl lg:text-3xl sm:text-xl'>Contact Us</h1>
           <p className='font-bold p-5'>
           Are you ready to start your next project, contact us below.
           </p>
@@ -124,7 +125,7 @@ const Contact = () => {
               onChange={handleChangeInput}
             />
           </div>
-            <button type="button" className="text-center w-32 text-center bg-black text-white dark:text-black dark:bg-white rounded p-2 mb-5 cursor-pointer hover:bg-gray-500 font-medium" onClick={handleSubmit}>{!loading ? 'Send Message' : 'Sending...'}</button>
+            <button type="button" className="text-center w-32 text-center bg-black text-white dark:text-black dark:bg-white rounded p-2 mb-5 cursor-pointer hover:scale-x-105  font-medium" onClick={handleSubmit}>{!loading ? 'Send Message' : 'Sending...'}</button>
           </form>
          ) : (
         <div>
@@ -138,10 +139,25 @@ const Contact = () => {
         <h1 className='text-center uppercase font-bold mb-5'>KEEP IN TOUCH</h1>
         <p className='chat text-gray-500 mb-5 tex-xl text-center'>Do not hesitate to contact me with any questions. Feel free to drop in for a chat on whatsapp</p>
                 <a href='https://api.whatsapp.com/send?phone=2348175509185'>
-       <button className='bg-black text-white dark:text-black dark:bg-white text-center rounded-3xl p-3 cursor-pointer hover:bg-gray-700 font-medium'>
+       <button className='bg-black text-white dark:text-black dark:bg-white text-center rounded-3xl p-3 cursor-pointer hover:scale-x-105 font-medium'>
       <BsWhatsapp  fontSize={28} />
         </button>
         </a>
+    </div>
+
+    <div className=" text-center flex justify-evenly p-5 pb-32 cursor-pointer items-center">
+    <div>
+        <a href='https://www.linkedin.com/in/ashabilateefatoduntan/'>
+      <FaLinkedin className='hover:scale-x-105 mb-32 ' fontSize={28}/></a>
+    </div>
+    <div>
+        <a href='https://github.com/OloriAsab'>
+        <FaGithubSquare className='hover:scale-x-105 mb-32' fontSize={28}/></a>
+    </div>
+    <div>
+        <a href='https://www.twitter.com/olorii_ashabi'>
+        <FaTwitter className='hover:scale-x-105 mb-32 ' fontSize={28}/></a>
+    </div>
     </div>
       </div>
   )

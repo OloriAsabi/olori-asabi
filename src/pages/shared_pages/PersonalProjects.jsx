@@ -31,7 +31,7 @@ const PersonalProjects = () => {
       };
     
   return (
-    <div className='container mx-auto h-screen w-screen p-5'>
+    <div className='container mx-auto h-screen w-screen overflow-y-scroll p-5'>
         <div className="text-center items-center shadow-black w-full p-3 flex-wrap flex-row flex justify-center space-x-4 space-y-2">
         {['Angular', 'React.js', "React Native",'Next.js', 'All'].map((item, index) => (
           <div
@@ -53,7 +53,7 @@ const PersonalProjects = () => {
             <div
               className="h-full object-cover hover:opacity-100 relative"
             >
-              <img src={urlFor(work.imgUrl)} className="block h-full" alt={work.name} />
+              <img src={urlFor(work.imgUrl)} className="block h-auto" alt={work.name} />
               <div className="w-full overlays justify-center items-center flex flex-col text-white text-center transition ease-in delay-150 absolute h-full object-cover top-0  bottom-0 left-0 right-0">
               <h4 className="font-extrabold text-center">{work.title}</h4>
               <p className="text-center">{work.tags[0]}</p>  
