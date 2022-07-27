@@ -1,4 +1,4 @@
-import React,{ useState,useEffect } from 'react'
+import React,{ useState } from 'react'
 import { PersonalProjects, Work } from './shared_pages'
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
 
@@ -7,15 +7,6 @@ const Portfolio = () => {
 
     const [showPersonalProjects, setShowPersonalProjects] = useState(false);
     const [showWorkProjects, setShowWorkProjects] = useState(false);
-
-    useEffect(() => {
-     if(showPersonalProjects){
-        setShowWorkProjects(!showWorkProjects)
-     }
-     if(showWorkProjects){
-        setShowPersonalProjects(!showPersonalProjects)
-     }
-    }, [])
     
   return (
     <div className='bg-white text-black overflow-y-scroll w-screen h-screen overscroll-contain dark:text-white dark:bg-black p-5 services'>

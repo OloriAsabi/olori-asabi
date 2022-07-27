@@ -44,9 +44,8 @@ const PersonalProjects = () => {
         ))}
       </div>
 
-      <div>
       <div
-        className="grid lg:grid-cols-4 h-screen  mb-32 overscroll-contain md:grid-cols-3 pb-32 sm:grid-cols-1 m-5 gap-8 justify-center items-center shadow-black text-center"
+        className="grid lg:grid-cols-4 h-screen  mb-64 overscroll-contain md:grid-cols-3 pb-32 sm:grid-cols-1 m-5 gap-8 justify-center items-center shadow-black text-center"
         > 
          {filterWork.map((work, index) => (
           <div className="mt-5 pb-10" key={index}>
@@ -79,14 +78,13 @@ const PersonalProjects = () => {
               <p className="text-justify text-xl font-extralight" style={{ marginTop: 10 }}>{work.description}</p>
             </div>
           </div>
-        ))}     
-      </div> 
-        <div className='bg-black text-white dark:text-black w-32 ml-auto mr-auto dark:bg-white rounded text-center p-2 cursor-pointer hover:scale-x-105 font-medium'>
-        <button type="button" className='ShowMore-btn ' onClick={() => setExpanded(!expanded)}>
+        ))}    
+        <div className='bg-black text-white dark:text-black w-32 mb-32 ml-auto mr-auto flex justify-center items-center text-center dark:bg-white rounded text-center p-2 cursor-pointer hover:scale-x-105 font-medium'>
+        <button type="button" className='ShowMore-btn' onClick={() => setExpanded(!expanded)}>
           {expanded ? 'Show Less' : 'Show More'} 
         </button>
         </div>
-      </div>
+        </div> 
     </div>
   )
 }
