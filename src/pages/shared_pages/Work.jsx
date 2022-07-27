@@ -35,7 +35,7 @@ const Work = () => {
         }, 100);
       };
   return (
-    <div className='container mx-auto h-screen overflow-y-scroll p-5'>
+    <div className='container mx-auto pb-32 mb-32 overflow-y-scroll h-screen overscroll-contain p-5'>
         <div className="text-center items-center shadow-black w-full p-3 flex-wrap flex-row flex justify-center space-x-4 space-y-2">
         {['Angular', 'React.js', "React Native",'Next.js', 'All'].map((item, index) => (
           <div
@@ -49,10 +49,10 @@ const Work = () => {
       </div>
       <div>
       <div
-        className="text-center grid lg:grid-cols-3 md:grid-cols-2  sm:grid-cols-1 m-5 gap-8 justify-center items-center shadow-black"
+        className="text-center grid  mb-32 lg:grid-cols-3 md:grid-cols-2 pb-32 sm:grid-cols-1 m-5 gap-8 justify-center items-center shadow-black"
          > 
          {filterPersonalProjects.map((work, index) => (
-          <div className="mt-5" key={index}>
+          <div className="mt-5 pb-20" key={index}>
             <div
               className="h-full object-cover hover:opacity-100 relative"
             >

@@ -11,7 +11,7 @@ const Services = () => {
       <h1 className='font-medium md:text-3xl text-start lg:text-3xl sm:text-xl mb-5'>MY SERVICES</h1>
     <div className='bg-white grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-4 dark:text-white dark:bg-black justify-center items-center shadow-black'>
         {services.map((service) => (
-        <div key={service.id} className="border-solid border-2 p-5 hover:bg-gray-200 cursor-pointer rounded-2xl w-full h-full border-gray-500">
+        <div key={service.id} className="border-solid border-2 p-5 hover:bg-gray-200  hover:text-black cursor-pointer rounded-2xl w-full h-full border-gray-500">
             <div className='text-3xl text-gray-700 mb-5'>{service.icon}</div>
             <h1 className='text-xl uppercase font-bold'>{service.title}</h1>
             <p className='text-gray-500 font-extralight pt-3 text-sm'>{service.info}</p>

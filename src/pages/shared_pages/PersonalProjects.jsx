@@ -16,7 +16,7 @@ const PersonalProjects = () => {
           setWorks(data);
           setFilterWork(expanded ? data : data.slice(0, 5));
         });  
-      }, []);
+      }, [expanded]);
 
       const handleWorkFilter = (item) => {
         setActiveFilter(item);
@@ -31,7 +31,7 @@ const PersonalProjects = () => {
       };
     
   return (
-    <div className='container mx-auto h-screen w-screen overflow-y-scroll p-5'>
+    <div className='container mx-auto overflow-y-scroll h-screen overscroll-contain w-screen pb-32 mb-32 p-5'>
         <div className="text-center items-center shadow-black w-full p-3 flex-wrap flex-row flex justify-center space-x-4 space-y-2">
         {['Angular', 'React.js', "React Native",'Next.js', 'All'].map((item, index) => (
           <div
@@ -46,10 +46,10 @@ const PersonalProjects = () => {
 
       <div>
       <div
-        className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1 m-5 gap-8 justify-center items-center shadow-black text-center"
+        className="grid lg:grid-cols-4 h-screen  mb-32 overscroll-contain md:grid-cols-3 pb-32 sm:grid-cols-1 m-5 gap-8 justify-center items-center shadow-black text-center"
         > 
          {filterWork.map((work, index) => (
-          <div className="mt-5" key={index}>
+          <div className="mt-5 pb-10" key={index}>
             <div
               className="h-full object-cover hover:opacity-100 relative"
             >
@@ -82,7 +82,7 @@ const PersonalProjects = () => {
         ))}     
       </div> 
         <div className='bg-black text-white dark:text-black w-32 ml-auto mr-auto dark:bg-white rounded text-center p-2 cursor-pointer hover:scale-x-105 font-medium'>
-        <button type="button" className='ShowMore-btn' onClick={() => setExpanded(!expanded)}>
+        <button type="button" className='ShowMore-btn ' onClick={() => setExpanded(!expanded)}>
           {expanded ? 'Show Less' : 'Show More'} 
         </button>
         </div>

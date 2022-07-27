@@ -39,7 +39,7 @@ const Contact = () => {
   }
 
   return (
-    <div className='bg-white overflow-y-scroll overscroll-contain h-screen text-black dark:text-white dark:bg-black '>      
+    <div className='bg-white overflow-y-scroll overscroll-contain w-screen h-screen mb-32 mt-32 text-black dark:text-white dark:bg-black'>      
     <div className='container mx-auto'>
       <div className="text-center">
           <h1 className='p-5 font-bold md:text-3xl lg:text-3xl sm:text-xl'>Contact Us</h1>

@@ -20,7 +20,7 @@ const About = () => {
     },[])
 
   return (
-        <div className='bg-white  overflow-y-scroll overscroll-contain h-screen text-black dark:bg-black dark:text-white'>
+        <div className='bg-white overflow-y-scroll overscroll-contain pb-32 h-screen text-black dark:bg-black dark:text-white'>
         <div className='container mx-auto h-screen'>
         <div className='flex items-center flex-col justify-center p-5'>
             <div className='border rounded border-black dark:border-white mt-10'>
@@ -43,8 +43,8 @@ const About = () => {
         </div>
         </div>
 
-        <div className='books container mx-auto w-screen'>
-      <header className='flex  justify-between p-5'>
+        <div className='books pb-32 container mx-auto w-screen'>
+      <header className='flex pb-32  justify-between p-5'>
       <h4 className='font-bold text-xl'>Learn More About Me</h4>
       <button className="" onClick={()=>setReadMore(!readMore)}>
       {readMore ? <AiOutlineMinus className='hover:scale-x-105 border-none bg-black text-white dark:text-black dark:bg-white' fontSize={28} /> : <AiOutlinePlus className='hover:scale-x-105 border-none bg-black text-white dark:text-black dark:bg-white'  fontSize={28}/>} 

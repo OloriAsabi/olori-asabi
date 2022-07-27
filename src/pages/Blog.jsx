@@ -2,8 +2,8 @@ import React from 'react'
 
 const Blog = () => {
   return (
-<div className='bg-white overflow-y-scroll overscroll-contain text-black h-screen dark:bg-black dark:text-white'>
-        <div className='container mx-auto  w-screen h-screen'>
+<div className='bg-white overflow-y-scroll  overscroll-contain text-black h-screen dark:bg-black dark:text-white'>
+        <div className='container mx-auto pb-32 overflow-y-scroll  w-screen h-screen'>
         <h1 className='text-3xl text-start font-extrabold p-10'>Check My Articles On</h1>
 
         <div className='flex small justify-center items-center text-center'>
@@ -23,7 +23,7 @@ const Blog = () => {
             </div>
         </div>
         
-        <div>
+        <div className='pb-32'>
             <h2 className='text-3xl text-center font-extrabold pt-5'>  My Latest Article </h2>
               <div className='justify-center'>
                 <h5 className='text-xl font-bold text-center p-5'>Title: Google OAuth2 using the new Google Identity Services SDK for React using Jwt-decode</h5>
